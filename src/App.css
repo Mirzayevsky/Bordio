@@ -4,3 +4,11 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+html{
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar{
+    width: 0;
+  }
+  

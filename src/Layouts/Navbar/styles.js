@@ -12,28 +12,7 @@ export const NavbarWrapper = styled.div`
 export const ButtonWrapper = styled.div`
   display: flex;
   align-items: center;
-  position: fixed;
-  left: 393px;
-`;
-
-export const KanbanBtn = styled.div`
-  width: 119px;
-  height: 40px;
-  padding: 8px 20px;
-  border-radius: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  color: #fff;
-  background: #0094ff;
-  font-family: "Roboto";
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16px;
-  letter-spacing: 0em;
-  text-align: right;
-  cursor: pointer;
+  margin-left: 10px;
 `;
 export const ContentsWrapper = styled.div`
   margin-left: auto;

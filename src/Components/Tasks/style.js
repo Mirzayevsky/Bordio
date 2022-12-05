@@ -1,48 +1,31 @@
 import styled from "styled-components";
 export const TaskWrapper = styled.div`
-width: 100%;
-height: 100%;
-overflow: auto;
-`;
-export const TitleWrapper = styled.div`
-height: 61.4px;
-background-color: #fff !important;
-display: flex;
-justify-content: space-between;
-border-bottom: 1px solid #F3F3F3;
-margin-left: 15px;
-margin-bottom: 30px;
-
-`;
-export const Title = styled.div`
-min-width: 270px !important;
 margin: 0 10px;
-color: #222222;
-font-family: 'Roboto';
-font-size: 14px;
-font-weight: 500;
-line-height: 16px;
-letter-spacing: 0em;
-text-align: center;
-background-color: #fff !important;
-cursor: pointer;
-padding-top: 26px;
-`;
-
-export const CardWrapper = styled.div`
-display: flex;
-justify-content: space-between;
+height: 100%;
+position: relative;
+background-color: lightgreen;
+&:nth-child(1){
 margin-left: 20px;
-background-color: #222222;
-
+}
 
 `;
 export const Card = styled.div`
-height: 68.4px;
-min-width: 270px !important;
+min-width: 266px !important;
+height: 68.41px;
 border-radius: 8px;
 padding: 15px;
-background-color: red;
-margin: 10px;
+margin: 10px 0;
 cursor: pointer;
+&:nth-child(1){
+    background-color: lightgray;
+}
+&:nth-child(2){
+    background-color: blue;
+}
+&:nth-child(3){
+    background-color: rebeccapurple;
+}
+&:nth-child(4){
+    background-color: lightgreen;
+}
 `;
