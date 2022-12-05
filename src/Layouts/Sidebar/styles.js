@@ -33,6 +33,7 @@ border: 0;
 outline: 0;
 color: #fff;
 padding: 0  10px;
+position: relative;
 `;
 export const Container = styled.div`
 width: 100%;
@@ -46,7 +47,7 @@ align-items: center;
 margin-top: 10px;
 color: #FFFFFF;
 background: #2D4071;
-top: 135px;
+top: 130px;
 position: absolute;
 cursor: pointer;
 `;
@@ -69,5 +70,18 @@ line-height: 16px;
 letter-spacing: 0em;
 text-align: left;
 margin-left: 15px;
+`;
+export const SeachSvgWrapper = styled.div`
+height: 12px;
+width: 12px;
+border-radius: 0px;
+position: absolute;
+top: 7px;
+right: 11px;
+
+svg{
+    height: 100%;
+    width: 100%;
+}
 
 `;

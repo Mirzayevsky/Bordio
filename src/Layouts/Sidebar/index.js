@@ -7,12 +7,12 @@ import {
   Logo,
   SidebarWrapper,
   Link,
-  UserSvgWrapper
+  UserSvgWrapper,
+  SeachSvgWrapper
 } from "./styles";
 import { ReactComponent as LogoSvg } from "../../assets/bordio-logo.svg";
 import { ReactComponent as UserSvg } from "../../assets/Ellipse 1.svg";
-
-
+import { ReactComponent as SeachSvg } from "../../assets/kontur.svg";
 
 const Sidebar = () => {
   return (
@@ -22,6 +22,9 @@ const Sidebar = () => {
       </Logo>
       <InputWrapper>
         <Input name={"search"} placeholder={"Search"} />
+        <SeachSvgWrapper>
+          <SeachSvg/>
+        </SeachSvgWrapper>
       </InputWrapper>
       <Container>
       <LinkWrapper>
