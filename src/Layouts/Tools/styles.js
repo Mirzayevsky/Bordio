@@ -2,7 +2,7 @@ import styled from "styled-components";
 export const ToolsWrapper = styled.div`
 height: 978px;
 width: 154px;
-left: 219px;
+left: 219px; 
 top: 0px;
 border-radius: 0px;
 position: fixed;
