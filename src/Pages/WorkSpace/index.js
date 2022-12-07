@@ -11,7 +11,7 @@ import {
   Wrapper,
   TaskContent,
 } from "./styles";
-
+import {tasks} from "../../data"
 
 const WorkSpace = () => {
   return (
@@ -38,23 +38,17 @@ const WorkSpace = () => {
         </TitleWrapper>
         <TitleWrapper>
           <Wrapper>
-            <Title>In progress</Title>
-            <TaskCount>22</TaskCount>
-          </Wrapper>
-        </TitleWrapper>
-        <TitleWrapper>
-          <Wrapper>
             <Title>Completed</Title>
             <TaskCount>31</TaskCount>
           </Wrapper>
         </TitleWrapper>
       </Header>
       <TasksWrapper>
-       <CardColumn/>
-       <CardColumn/>
-       <CardColumn/>
-       <CardColumn/>
-       <CardColumn/>
+       <CardColumn tasks={tasks.newTasks}/>
+       <CardColumn tasks={tasks.scheduled}/>
+       <CardColumn tasks={tasks.inprogress}/>
+       <CardColumn tasks={tasks.completed}/>
+
       </TasksWrapper>
     </TaskContent>
     <AddStatus/>

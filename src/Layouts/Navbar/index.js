@@ -57,6 +57,7 @@ const Navbar = () => {
           color="#222222"
           bg="#F5F8FA"
           text="Kanban"
+          isDropDown={'true'}
           DownSvg={DownSvg}
         />
         <Button

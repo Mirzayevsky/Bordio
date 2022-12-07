@@ -1,4 +1,9 @@
-import { ButtonWrapper, InputInner} from "./styles";
+import {
+  ButtonWrapper,
+  DropDownItem,
+  DropDownWrapper,
+  InputInner,
+} from "./styles";
 
 export const Button = ({
   width,
@@ -8,6 +13,7 @@ export const Button = ({
   text,
   Icon,
   DownSvg,
+  isDropDown,
   children,
 }) => {
   return (
@@ -22,6 +28,15 @@ export const Button = ({
       {children}
       {Icon ? <Icon /> : ``}
       {text} {DownSvg ? <DownSvg className="down" /> : ``}
+      {isDropDown === "true" ? (
+        <DropDownWrapper className="drop_true">
+          <DropDownItem> Board view</DropDownItem>
+          <DropDownItem> Table view</DropDownItem>
+          <DropDownItem> Kanban</DropDownItem>
+        </DropDownWrapper>
+      ) : (
+        ""
+      )}
     </ButtonWrapper>
   );
 };
@@ -32,7 +47,7 @@ export const Input = ({
   name,
   action,
   value,
-  type='text',
+  type = "text",
   bg,
   color,
   placeholder,

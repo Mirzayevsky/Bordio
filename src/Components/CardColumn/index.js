@@ -1,14 +1,12 @@
 import React from 'react'
 import { CardWrapper, TaskCard} from './style'
-
-const CardColumn= () => {
+const CardColumn= ({tasks}) => {
+  console.log(tasks);
   return (
     <CardWrapper>
-        <TaskCard/>
-        <TaskCard/>
-        <TaskCard/>
-        <TaskCard/>
-        <TaskCard/>
+       {tasks.map((item)=> (
+         <TaskCard style={{backgroundColor:`${item.bg}`}} key={item.id}>{item.title} {item.date}</TaskCard>
+       ))}
     </CardWrapper>
   )
 }
