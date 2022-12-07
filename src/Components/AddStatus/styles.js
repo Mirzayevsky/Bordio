@@ -1,11 +1,13 @@
 import styled from "styled-components";
 export const StatusWrapper = styled.div`
-  width: calc(100% - 82%);
+  width: calc(100% - 73.5%);
   height: calc(100vh - 80px);
   position: fixed;
   right: 0;
   bottom: 0;
   background-color: #fff;
+  background-color: red;
+  z-index: 1211;
 `;
 export const Header = styled.div`
   height: 61.4px;

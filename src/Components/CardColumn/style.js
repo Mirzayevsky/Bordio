@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const CardWrapper = styled.div`
-  margin: 0 10px;
+  margin: 0 22px;
   height: 100%;
   position: relative;
   z-index: -1px;
@@ -11,7 +11,7 @@ export const CardWrapper = styled.div`
     background: #F3F3F3;
     position: absolute;
     top: -27px;
-    left: -10px;
+    left: -22px;
     z-index: 99px;
   }
   &:nth-child(1) {
@@ -22,11 +22,11 @@ export const CardWrapper = styled.div`
       background-color: unset;
       position: absolute;
       top: 0;
-      left: -4%;
+      left: -7%;
     }
   }
   &:nth-child(1) {
-    margin-left: 18px;
+    margin-left: 21.5px;
   }
 `;
 export const TaskCard = styled.div`

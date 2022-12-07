@@ -9,13 +9,16 @@ export const WorkSpaceWrapper = styled.div`
 `;
 export const TaskContent = styled.div`
   height: calc(100vh - 80px);
-  width: 75.5%;
+  width: 62.5%;
   /* top: 80px;
   left: 373px;
   position: fixed; */
   border-right: 1px solid #f3f3f3;
   background-color: #fff;
   overflow-x: auto;
+  &:nth-last-child(){
+    border-right: 0;
+  }
 `;
 export const Header = styled.div`
   height: 61.4px;
@@ -34,7 +37,7 @@ export const TitleWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 12px;
-  margin: 0 10px;
+  margin: 0 20px;
   position: relative;
 `;
 export const Wrapper = styled.div`
@@ -75,4 +78,5 @@ export const TasksWrapper = styled.div`
   margin: auto;
   display: flex;
   margin-top: 28px;
+  margin-right: 20px;
 `;
