@@ -2,7 +2,6 @@ import styled from "styled-components";
 export const WorkSpaceWrapper = styled.div`
 width: calc(100vw - 373px) ;
 height:calc(100vh - 80px);
-background-color: rebeccapurple;
 position: fixed;
 right: 0;
 bottom: 0;
@@ -14,15 +13,15 @@ width:75%;
 /* top: 80px;
 left: 373px;
 position: fixed; */
-border: 1px solid gray;
+border-right: 1px solid #F3F3F3 ;
 background-color: #fff;
 overflow-x: auto;
-
 
 `;
 export const Header = styled.div`
 height: 61.4px;
-/* background-color: #fff !important; */
+width: fit-content;
+background-color: #fff !important;
 display: flex;
 justify-content: space-between;
 border-bottom: 1px solid #F3F3F3;

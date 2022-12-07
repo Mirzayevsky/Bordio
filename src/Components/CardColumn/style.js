@@ -5,11 +5,11 @@ export const CardWrapper = styled.div`
   position: relative;
   &::before {
     content: "";
-    height: 110%;
+    height: 132%;
     width: 1px;
     background: #f3f3f3;
     position: absolute;
-    top: -24px;
+    top: -20px;
     left: -4%;
     z-index: 2px;
   }

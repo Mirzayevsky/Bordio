@@ -1,5 +1,6 @@
 import React from "react";
-import Card from "../../Components/Cards";
+import CardColumn from "../../Components/CardColumn";
+import AddStatus from "../../Components/AddStatus/index"
 import {
   WorkSpaceWrapper,
   Title,
@@ -10,6 +11,7 @@ import {
   Wrapper,
   TaskContent,
 } from "./styles";
+
 
 const WorkSpace = () => {
   return (
@@ -48,14 +50,14 @@ const WorkSpace = () => {
         </TitleWrapper>
       </Header>
       <TasksWrapper>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+       <CardColumn/>
+       <CardColumn/>
+       <CardColumn/>
+       <CardColumn/>
+       <CardColumn/>
       </TasksWrapper>
     </TaskContent>
-
+    <AddStatus/>
     </WorkSpaceWrapper>
   );
 };

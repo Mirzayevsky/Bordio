@@ -8,6 +8,8 @@ export const NavbarWrapper = styled.div`
   left: 373px;
   display: flex;
   align-items: center;
+  z-index: 999;
+  
 `;
 export const ButtonWrapper = styled.div`
   display: flex;

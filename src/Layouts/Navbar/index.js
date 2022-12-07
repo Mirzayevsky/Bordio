@@ -18,7 +18,6 @@ import { ReactComponent as BellSvg } from "../../assets/bxs-bell.svg";
 import { ReactComponent as UserSvg } from "../../assets/Ellipse 1.svg";
 
 
-
 const Navbar = () => {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
