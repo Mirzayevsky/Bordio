@@ -26,25 +26,25 @@ const WorkSpace = () => {
           <TitleWrapper>
             <Wrapper>
               <Title>New tasks</Title>
-              <TaskCount>3</TaskCount>
+              <TaskCount>{state.newTasks.length}</TaskCount>
             </Wrapper>
           </TitleWrapper>
           <TitleWrapper>
             <Wrapper>
               <Title>Scheduled</Title>
-              <TaskCount>12</TaskCount>
+              <TaskCount>{state.scheduled.length}</TaskCount>
             </Wrapper>
           </TitleWrapper>
           <TitleWrapper>
             <Wrapper>
               <Title>In progress</Title>
-              <TaskCount>22</TaskCount>
+              <TaskCount>{state.inprogress.length}</TaskCount>
             </Wrapper>
           </TitleWrapper>
           <TitleWrapper>
             <Wrapper>
               <Title>Completed</Title>
-              <TaskCount>31</TaskCount>
+              <TaskCount>{state.completed.length}</TaskCount>
             </Wrapper>
           </TitleWrapper>
         </Header>

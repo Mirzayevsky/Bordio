@@ -44,14 +44,14 @@ width: 100%;
 height: 34px;
 display: flex;
 align-items: center;
-margin-top: 10px;
+margin-top: 20px;
 color: #FFFFFF;
 background: #2D4071;
 cursor: pointer;
 `;
 export const UserSvgWrapper = styled.div`
-height: 22px;
-width: 22px;
+height: 25px;
+width: 25px;
 margin-left: 16px;
 
 svg{
@@ -62,7 +62,7 @@ height: 100%;
 export const Link = styled.div`
 color: #fff;
 font-family: 'Roboto';
-font-size: 14px;
+font-size: 15px;
 font-weight: 400;
 line-height: 16px;
 letter-spacing: 0em;
@@ -83,13 +83,49 @@ svg{
 }
 `;
 export const Wrapper = styled.div`
-margin-top: 10px;
+width: 100%;
+margin: auto;
+margin-top: 20px;
 color: #fff;
+font-family: 'Roboto';
+font-size: 15px;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+svg{
+    width: 10px;
+    height: 5px;
+    margin-left: 23px;
+    path{
+        fill: #fff;
+    }
+}
+`;
+export const DropLink = styled.div`
+display: flex;
+align-items: center;
+p{
+    margin-left: 20px;
+}
+
 `;
 export const DropDownWrapper = styled.div`
+color: #8C939F;
+font-family: 'Roboto';
+font-size: 15px;
+font-weight: 400;
+line-height: 16px;
+text-align: left;
+
+
 
 `;
 
 export const DropDown = styled.div`
-
+ margin-top: 20px;
+ margin-left: 16px;
+ &:nth-child(1){
+    margin-top: 25px;
+}
 `;

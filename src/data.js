@@ -66,7 +66,7 @@ export const initialState  = {
         {
             id:3,
             title:'Process all resumes for Content Marketer position',
-            date:'0 : 20h',
+            date:'0:45h',
             bg:"#FFDFBA"
         },
     ],
@@ -74,7 +74,7 @@ export const initialState  = {
         {
             id:1,
             title:'Check email',
-            date:'0:20h',
+            date:'2:30h',
             bg:"#F0F0F0"
         },
         {

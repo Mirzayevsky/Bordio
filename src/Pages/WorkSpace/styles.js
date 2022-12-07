@@ -9,7 +9,7 @@ export const WorkSpaceWrapper = styled.div`
 `;
 export const TaskContent = styled.div`
   height: calc(100vh - 80px);
-  width: 75%;
+  width: 75.5%;
   /* top: 80px;
   left: 373px;
   position: fixed; */
@@ -74,4 +74,5 @@ export const TaskCount = styled.div`
 export const TasksWrapper = styled.div`
   margin: auto;
   display: flex;
+  margin-top: 28px;
 `;

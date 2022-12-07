@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const StatusWrapper = styled.div`
-  width: calc(100% - 81.15%);
+  width: calc(100% - 82%);
   height: calc(100vh - 80px);
   position: fixed;
   right: 0;
@@ -21,7 +21,6 @@ export const Header = styled.div`
   margin-top: 6%;
   margin-left: 30px;
   position: absolute;
-  
     path {
       fill: #8C939F;
     }
@@ -38,11 +37,11 @@ export const Header = styled.div`
   }
 `;
 export const Input = styled.input`
-height: 100%;
-width: 90%;
-margin-left:auto;
-border: 0;
-outline: none;
+  height: 100%;
+  width: 90%;
+  margin-left:auto;
+  border: 0;
+  outline: none;
   font-family: "Roboto";
   font-size: 14px;
   font-weight: 400;

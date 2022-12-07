@@ -8,9 +8,9 @@ export const CardWrapper = styled.div`
     content: "";
     height: calc(100vh - 160px);
     width: 1px;
-    background: red;
+    background: #F3F3F3;
     position: absolute;
-    top: -20px;
+    top: -27px;
     left: -10px;
     z-index: 99px;
   }
@@ -26,7 +26,7 @@ export const CardWrapper = styled.div`
     }
   }
   &:nth-child(1) {
-    margin-left: 20px;
+    margin-left: 18px;
   }
 `;
 export const TaskCard = styled.div`
