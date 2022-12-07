@@ -1,12 +1,11 @@
 import styled from "styled-components";
 export const StatusWrapper = styled.div`
-  width: calc(100% - 73.5%);
+  width: calc(100% - 73%);
   height: calc(100vh - 80px);
   position: fixed;
   right: 0;
   bottom: 0;
   background-color: #fff;
-  background-color: red;
   z-index: 1211;
 `;
 export const Header = styled.div`
@@ -20,7 +19,7 @@ export const Header = styled.div`
   svg {
   height: 14px;
   width: 13px;
-  margin-top: 6%;
+  margin-top: 4%;
   margin-left: 30px;
   position: absolute;
     path {
