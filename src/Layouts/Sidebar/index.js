@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    Container,
+  Container,
   Input,
   InputWrapper,
   LinkWrapper,
@@ -8,7 +8,10 @@ import {
   SidebarWrapper,
   Link,
   UserSvgWrapper,
-  SeachSvgWrapper
+  SeachSvgWrapper,
+  DropDownWrapper,
+  DropDown,
+  Wrapper,
 } from "./styles";
 import { ReactComponent as LogoSvg } from "../../assets/bordio-logo.svg";
 import { ReactComponent as UserSvg } from "../../assets/Ellipse 1.svg";
@@ -23,16 +26,28 @@ const Sidebar = () => {
       <InputWrapper>
         <Input name={"search"} placeholder={"Search"} />
         <SeachSvgWrapper>
-          <SeachSvg/>
+          <SeachSvg />
         </SeachSvgWrapper>
       </InputWrapper>
       <Container>
-      <LinkWrapper>
-      <UserSvgWrapper>
-        <UserSvg/>
-      </UserSvgWrapper>
-      <Link>My workspace</Link>
-      </LinkWrapper>
+        <LinkWrapper>
+          <UserSvgWrapper>
+            <UserSvg />
+          </UserSvgWrapper>
+          <Link>My workspace</Link>
+        </LinkWrapper>
+        <Wrapper>
+        <LinkWrapper>
+          <UserSvgWrapper>
+            <UserSvg />
+          </UserSvgWrapper>
+          <Link>My workspace</Link>
+        </LinkWrapper>
+          <DropDownWrapper>
+            <DropDown>Marketing</DropDown>
+            <DropDown>Mobile App</DropDown>
+          </DropDownWrapper>
+        </Wrapper>
       </Container>
     </SidebarWrapper>
   );

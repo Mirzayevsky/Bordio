@@ -33,9 +33,9 @@ padding: 0 10px;
 margin-top: 30px;
 }
 &:nth-child(2){
+color: #0094FF;
 background: #FFFFFF;
 }
-
 `;
 export const LinkIconWrapper = styled.div`
 `;

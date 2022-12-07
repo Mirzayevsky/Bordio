@@ -102,6 +102,7 @@ export const initialState  = {
             date:'0 : 20h',
             bg:"#F0F0F0"
         },
+    
     ]
 }
 

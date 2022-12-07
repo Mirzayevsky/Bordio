@@ -19,9 +19,9 @@ export const InputWrapper = styled.div`
 height: 32px;
 width: 187px;
 margin-left: 16px;
-top: 84px;
 border-radius: 4px;
-position: absolute;
+margin-top: 28px;
+position: relative;
 
 `;
 export const Input = styled.input`
@@ -47,8 +47,6 @@ align-items: center;
 margin-top: 10px;
 color: #FFFFFF;
 background: #2D4071;
-top: 130px;
-position: absolute;
 cursor: pointer;
 `;
 export const UserSvgWrapper = styled.div`
@@ -83,5 +81,15 @@ svg{
     height: 100%;
     width: 100%;
 }
+`;
+export const Wrapper = styled.div`
+margin-top: 10px;
+color: #fff;
+`;
+export const DropDownWrapper = styled.div`
+
+`;
+
+export const DropDown = styled.div`
 
 `;
