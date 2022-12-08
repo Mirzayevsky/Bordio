@@ -62,7 +62,7 @@ height: 100%;
 export const Link = styled.div`
 color: #fff;
 font-family: 'Roboto';
-font-size: 15px;
+font-size: 14px;
 font-weight: 400;
 line-height: 16px;
 letter-spacing: 0em;
@@ -88,7 +88,7 @@ margin: auto;
 margin-top: 20px;
 color: #fff;
 font-family: 'Roboto';
-font-size: 15px;
+font-size: 14px;
 font-weight: 400;
 line-height: 16px;
 letter-spacing: 0em;
@@ -113,7 +113,7 @@ p{
 export const DropDownWrapper = styled.div`
 color: #8C939F;
 font-family: 'Roboto';
-font-size: 15px;
+font-size: 14px;
 font-weight: 400;
 line-height: 16px;
 text-align: left;
