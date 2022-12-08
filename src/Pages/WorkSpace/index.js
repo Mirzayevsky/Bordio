@@ -1,6 +1,4 @@
 import React, { useContext, useState } from "react";
-import { Context } from "../../Context/Context";
-
 import CardColumn from "../../Components/CardColumn";
 import AddStatus from "../../Components/AddStatus/index";
 import {
@@ -13,11 +11,9 @@ import {
   Wrapper,
   TaskContent,
 } from "./styles";
-import { tasks } from "../../data";
+import { initialState } from "../../data";
 
 const WorkSpace = () => {
-  const { state, dispatch } = useContext(Context);
-  const [edit, setEdit] = useState(null);
 
   return (
     <WorkSpaceWrapper>
@@ -26,33 +22,33 @@ const WorkSpace = () => {
           <TitleWrapper>
             <Wrapper>
               <Title>New tasks</Title>
-              <TaskCount>{state.newTasks.length}</TaskCount>
+              <TaskCount>{initialState.newTasks.length}</TaskCount>
             </Wrapper>
           </TitleWrapper>
           <TitleWrapper>
             <Wrapper>
               <Title>Scheduled</Title>
-              <TaskCount>{state.scheduled.length}</TaskCount>
+              <TaskCount>{initialState.scheduled.length}</TaskCount>
             </Wrapper>
           </TitleWrapper>
           <TitleWrapper>
             <Wrapper>
               <Title>In progress</Title>
-              <TaskCount>{state.inprogress.length}</TaskCount>
+              <TaskCount>{initialState.inprogress.length}</TaskCount>
             </Wrapper>
           </TitleWrapper>
           <TitleWrapper>
             <Wrapper>
               <Title>Completed</Title>
-              <TaskCount>{state.completed.length}</TaskCount>
+              <TaskCount>{initialState.completed.length}</TaskCount>
             </Wrapper>
           </TitleWrapper>
         </Header>
         <TasksWrapper>
-          <CardColumn tasks={state.newTasks} />
-          <CardColumn tasks={state.scheduled} />
-          <CardColumn tasks={state.inprogress} />
-          <CardColumn tasks={state.completed} />
+          <CardColumn tasks={initialState.newTasks} />
+          <CardColumn tasks={initialState.scheduled} />
+          <CardColumn tasks={initialState.inprogress} />
+          <CardColumn tasks={initialState.completed} />
         </TasksWrapper>
       </TaskContent>
       <AddStatus />
