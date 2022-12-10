@@ -1,5 +1,5 @@
 import React from "react";
-import { DatepickerWrapper, Day, DayPicker, Month, MonthPicker } from "./styles";
+import { DatepickerWrapper, Day, DayName, DayNameWrapper, DayPicker, DayWrapper, Month, MonthPicker } from "./styles";
 var dates  = new Date();
 var current = dates.getMonth();
 
@@ -87,7 +87,7 @@ const dayNames = [
 
 const days = []
  
- for (let index = 1; index < 31; index++) {
+ for (let index = 0; index < 31; index++) {
     let prev  = 1
     let data = prev += index
     days.push(data )
@@ -101,9 +101,16 @@ const DatePicker = () => (
             ))}
         </MonthPicker>
         <DayPicker>
+           <DayNameWrapper>
             {dayNames.map((item)=>(
-                <Day key={item.id}>{item.name}</Day>
-            ))}
+                    <DayName key={item.id}>{item.name}</DayName>
+                ))}
+           </DayNameWrapper>
+           <DayWrapper>
+           {days.map((item ,index)=>(
+                    <Day key={index + 1}>{item}</Day>
+                ))}
+           </DayWrapper>
         </DayPicker>
 
     </DatepickerWrapper>
