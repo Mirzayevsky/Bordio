@@ -16,15 +16,17 @@ import { ReactComponent as SearchSvg } from "../../assets/kontur.svg";
 import { ReactComponent as XSvg } from "../../assets/x.svg";
 import { ReactComponent as BellSvg } from "../../assets/bxs-bell.svg";
 import { ReactComponent as UserSvg } from "../../assets/Ellipse 1.svg";
+import  {initialState} from "../../data"
+import DatePicker  from "../../Components/DatePicker/index";
 
 
 const Navbar = () => {
-  const [filteredData, setFilteredData] = useState([]);
+  const [filteredData, setFilteredData] = useState(initialState);
   const [wordEntered, setWordEntered] = useState("");
 
   const handleFilter = (event) => {
     const searchWord = event.target.value;
-    setWordEntered(searchWord);
+     setWordEntered(searchWord);
     const newFilter = []?.filter((value) => {
       return value.title.toLowerCase().includes(searchWord.toLowerCase());
     });
@@ -67,7 +69,10 @@ const Navbar = () => {
           bg="#F5F8FA"
           text="Filter"
           DownSvg={DownSvg}
-        />
+        >
+          <DatePicker/>
+        </Button>
+
       </ButtonWrapper>
       <ContentsWrapper>
         <InputWrapper>

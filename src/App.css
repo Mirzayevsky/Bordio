@@ -11,4 +11,7 @@ html{
   ::-webkit-scrollbar{
     width: 0;
   }
-  
+.ant-picker-dropdown{
+  width: 426px !important;
+  height: 278px;
+}  

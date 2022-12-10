@@ -1,7 +1,6 @@
 import React from "react";
 import { CardWrapper, Cover, Date, TaskCard, Title } from "./style";
 const CardColumn = ({ tasks }) => {
-  console.log(tasks);
 
   return (
     <CardWrapper>
