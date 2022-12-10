@@ -4,7 +4,6 @@ import {
   DropDownWrapper,
   InputInner,
 } from "./styles";
-import DatePicker from "../DatePicker";
 
 export const Button = ({
   width,
@@ -16,13 +15,9 @@ export const Button = ({
   DownSvg,
   isDropDown,
   children,
-  filter,
-  open,
-  setOpen
 }) => {
   return (
     <ButtonWrapper
-    onClick={open === false | true ? () => setOpen(!open) : undefined}
       style={{
         color: `${color}`,
         width: `${width}`,
@@ -42,7 +37,6 @@ export const Button = ({
       ) : (
         ""
       )}
-      {open ? <DatePicker/> : ''}
     </ButtonWrapper>
   );
 };

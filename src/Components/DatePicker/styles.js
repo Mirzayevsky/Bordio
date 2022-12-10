@@ -1,4 +1,30 @@
 import styled from "styled-components";
+
+export const Wrapper = styled.div`
+width:98px;
+height: 40px;
+color: #222222;
+margin-left: 10px;
+padding: 8px 20px;
+border-radius: 50px;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+font-family: 'Roboto';
+font-size: 14px;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: right;
+cursor: pointer;
+position: relative;
+transition: .8s;
+background-color: #F5F8FA;
+`;
+
+export const Title = styled.div`
+`;
 export const DatepickerWrapper = styled.div`
   width: 426px;
   height: 278px;

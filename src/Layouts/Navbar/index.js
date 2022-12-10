@@ -7,7 +7,7 @@ import {
   InputWrapper,
   Notification,
   UserAccount,
-  MessageCount
+  MessageCount,
 } from "./styles";
 import { Button, Input } from "../../Components/styles/index";
 import { ReactComponent as PlusSvg } from "../../assets/plusBtn.svg";
@@ -16,16 +16,17 @@ import { ReactComponent as SearchSvg } from "../../assets/kontur.svg";
 import { ReactComponent as XSvg } from "../../assets/x.svg";
 import { ReactComponent as BellSvg } from "../../assets/bxs-bell.svg";
 import { ReactComponent as UserSvg } from "../../assets/Ellipse 1.svg";
-import  {initialState} from "../../data"
+import { initialState } from "../../data";
+import DatePicker from "../../Components/DatePicker";
 
 const Navbar = () => {
   const [filteredData, setFilteredData] = useState(initialState);
   const [wordEntered, setWordEntered] = useState("");
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   const handleFilter = (event) => {
     const searchWord = event.target.value;
-     setWordEntered(searchWord);
+    setWordEntered(searchWord);
     const newFilter = []?.filter((value) => {
       return value.title.toLowerCase().includes(searchWord.toLowerCase());
     });
@@ -58,22 +59,10 @@ const Navbar = () => {
           color="#222222"
           bg="#F5F8FA"
           text="Kanban"
-          isDropDown={'true'}
-          DownSvg={DownSvg}
+          isDropDown={"true"}
         />
-        <Button
-          width="98px"
-          height="40px"
-          color="#222222"
-          bg="#F5F8FA"
-          text="Filter"
-          DownSvg={DownSvg}
-          filter={'filter'}
-          setOpen={setOpen}
-          open={open}
-       />
-
       </ButtonWrapper>
+      <DatePicker Svg={DownSvg} open={open} setOpen={setOpen} />
       <ContentsWrapper>
         <InputWrapper>
           <Input
@@ -87,14 +76,20 @@ const Navbar = () => {
             bg="#F5F8FA"
             // type="search"
           />
-          {wordEntered.length === 0 ? <SearchSvg /> :<XSvg onClick={clearInput}/>   }
+          {wordEntered.length === 0 ? (
+            <SearchSvg />
+          ) : (
+            <XSvg onClick={clearInput} />
+          )}
         </InputWrapper>
         <Notification>
-          <MessageCount><div>99+</div></MessageCount>
-          <BellSvg/>
+          <MessageCount>
+            <div>99+</div>
+          </MessageCount>
+          <BellSvg />
         </Notification>
         <UserAccount>
-          <UserSvg/>
+          <UserSvg />
         </UserAccount>
       </ContentsWrapper>
     </NavbarWrapper>
