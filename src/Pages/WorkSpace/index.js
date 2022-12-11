@@ -40,7 +40,6 @@ const WorkSpace = () => {
     setScheduled((prev) => prev.filter((_, i) => i !== item.index));
     setNewTask((prev) => [...prev, item]);
   };
-
   return (
     <WorkSpaceWrapper>
       <TaskContent>
@@ -83,8 +82,8 @@ const WorkSpace = () => {
             ondropTask={removeNewTaskFromScheduled}
             add={addToScheduledRef}
           />
-          {/* <CardColumn tasks={initialState.inprogress} />
-          <CardColumn tasks={initialState.completed} /> */}
+          {/* <CardColumn tasks={initialState.inprogress} /> */}
+          {/* <CardColumn tasks={initialState.completed} /> */}
         </TasksWrapper>
       </TaskContent>
       <AddStatus />

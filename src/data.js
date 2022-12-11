@@ -1,20 +1,20 @@
 export const initialState  = {
     newTasks: [
         {
-            id:1,
+            id:132523,
             title:'Check email',
             date:'0:20h',
             bg:"#ABE9CE"
 
         },
         {
-            id:2,
+            id:21235,
             title:'Compare PPC agencies and make a report for Steven',
             date:'3:00h',
             bg:"#D8DCFF"
         },
         {
-            id:3,
+            id:3767,
             title:'Meeting with Amanda (PR department)',
             date:'0 : 20h',
             bg:"#ABE9CE"
@@ -30,20 +30,20 @@ export const initialState  = {
     ],
     scheduled: [
         {
-            id:1,
+            id:115715474,
             title:'Check email',
             date:'0:20h',
             bg:"#FFDFBA"
 
         },
         {
-            id:2,
+            id:275414354,
             title:'Write a blogpost "7 best strategies for SEO in 2020"',
             date:'3:00h',
             bg:"#FEC6B7"
         },
         {
-            id:3,
+            id:317145,
             title:'New Ad copies for Manamaja',
             date:'0 : 20h',
             bg:"#D9E6A2"
