@@ -105,11 +105,8 @@ for (let index = 0; index < 31; index++) {
 
 const DatePicker = ({ children, Svg, open, setOpen }) => {
     const [state,setState ] = useState({month:null,day:null})
-    console.log(state);
-    const close = () => {
-        // if (state.month === null ){
-        //     setOpen(false)
-        // }
+    const closeDate = async () => {
+        
     };
   return (
     <Wrapper
@@ -124,7 +121,6 @@ const DatePicker = ({ children, Svg, open, setOpen }) => {
                key={item.value}
                onClick={() => {
                 setState({...state,month:item.value});
-                setOpen(false)
               }}>
                 {item.label}
               </Month>

@@ -1,24 +1,18 @@
 import React from "react";
-import { CardWrapper, Cover, Date, TaskCard, Title } from "./style";
-const CardColumn = ({ tasks }) => {
+import Card from "../Card";
+import { CardWrapper} from "./style";
 
+const TaskColumn = ({ tasks,type,ondropTask,add}) => {
+
+
+  
   return (
-    <CardWrapper>
-      {tasks.map((item) => (
-        <TaskCard style={{ backgroundColor: `${item.bg}` }} key={item.id}>
-          {item.bg === "#F0F0F0" ? <Cover /> : ""}
-          <Title
-            style={{
-              textDecoration: `${item.bg === "#F0F0F0" ? "line-through" : ""}`,
-            }}
-          >
-            {item.title}
-          </Title>
-          <Date>{item.date}</Date>
-        </TaskCard>
+    <CardWrapper ref={add}>
+      {tasks.map((item,index)=>(
+        <Card key={item.title} ondropTask={ondropTask} type={type} item={item} index={index}/>
       ))}
     </CardWrapper>
   );
 };
 
-export default CardColumn;
+export default TaskColumn;

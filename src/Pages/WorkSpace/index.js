@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
-import CardColumn from "../../Components/CardColumn";
+import TaskColumn from "../../Components/CardColumn";
 import AddStatus from "../../Components/AddStatus/index";
+
 import {
   WorkSpaceWrapper,
   Title,
@@ -12,8 +13,34 @@ import {
   TaskContent,
 } from "./styles";
 import { initialState } from "../../data";
+import { useDrop } from "react-dnd";
 
 const WorkSpace = () => {
+
+  const [newTask, setNewTask] = useState(initialState.newTasks);
+  const [scheduled, setScheduled] = useState(initialState.scheduled);
+
+  const [{ isOver }, addToScheduledRef] = useDrop({
+    accept: "newTask",
+    collect: (monitor) => ({ isOver: !!monitor.isOver() }),
+  });
+
+  const [{ isOver: isNewTaskOver }, removeFromScheduledRef] = useDrop({
+    accept: "scheduled",
+    collect: (monitor) => ({ isOver: !!monitor.isOver() }),
+  });
+
+  const moveNewTaskToScheduled = (item) => {
+    console.log(item);
+    setNewTask((prev)=> prev.filter((_,i) => i !== item.index))
+    setScheduled((prev) => [...prev,item])
+  };
+
+  const removeNewTaskFromScheduled = (item) => {
+    console.log(item);
+    setScheduled((prev)=> prev.filter((_,i) => i !== item.index))
+    setNewTask((prev) => [...prev,item])
+  };
 
   return (
     <WorkSpaceWrapper>
@@ -45,10 +72,10 @@ const WorkSpace = () => {
           </TitleWrapper>
         </Header>
         <TasksWrapper>
-          <CardColumn tasks={initialState.newTasks} />
-          <CardColumn tasks={initialState.scheduled} />
-          <CardColumn tasks={initialState.inprogress} />
-          <CardColumn tasks={initialState.completed} />
+          <TaskColumn tasks={newTask}  type="task"  ondropTask={moveNewTaskToScheduled} add={removeFromScheduledRef} />
+          <TaskColumn tasks={scheduled}  type="scheduled"  ondropTask={removeNewTaskFromScheduled} add={addToScheduledRef} />
+          {/* <CardColumn tasks={initialState.inprogress} />
+          <CardColumn tasks={initialState.completed} /> */}
         </TasksWrapper>
       </TaskContent>
       <AddStatus />
