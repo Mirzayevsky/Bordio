@@ -1,6 +1,9 @@
 import styled from "styled-components";
 export const CardWrapper = styled.div`
   margin: 0 22px;
+  min-width: 266px !important;
+  max-width: 266px !important;
+  min-height: calc(100vh - 195px);
   height: 100%;
   position: relative;
   z-index: -1px;

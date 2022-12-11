@@ -16,7 +16,6 @@ import { initialState } from "../../data";
 import { useDrop } from "react-dnd";
 
 const WorkSpace = () => {
-
   const [newTask, setNewTask] = useState(initialState.newTasks);
   const [scheduled, setScheduled] = useState(initialState.scheduled);
 
@@ -32,14 +31,14 @@ const WorkSpace = () => {
 
   const moveNewTaskToScheduled = (item) => {
     console.log(item);
-    setNewTask((prev)=> prev.filter((_,i) => i !== item.index))
-    setScheduled((prev) => [...prev,item])
+    setNewTask((prev) => prev.filter((_, i) => i !== item.index));
+    setScheduled((prev) => [...prev, item]);
   };
 
   const removeNewTaskFromScheduled = (item) => {
     console.log(item);
-    setScheduled((prev)=> prev.filter((_,i) => i !== item.index))
-    setNewTask((prev) => [...prev,item])
+    setScheduled((prev) => prev.filter((_, i) => i !== item.index));
+    setNewTask((prev) => [...prev, item]);
   };
 
   return (
@@ -72,8 +71,18 @@ const WorkSpace = () => {
           </TitleWrapper>
         </Header>
         <TasksWrapper>
-          <TaskColumn tasks={newTask}  type="task"  ondropTask={moveNewTaskToScheduled} add={removeFromScheduledRef} />
-          <TaskColumn tasks={scheduled}  type="scheduled"  ondropTask={removeNewTaskFromScheduled} add={addToScheduledRef} />
+          <TaskColumn
+            tasks={newTask}
+            type="newTask"
+            ondropTask={moveNewTaskToScheduled}
+            add={removeFromScheduledRef}
+          />
+          <TaskColumn
+            tasks={scheduled}
+            type="scheduled"
+            ondropTask={removeNewTaskFromScheduled}
+            add={addToScheduledRef}
+          />
           {/* <CardColumn tasks={initialState.inprogress} />
           <CardColumn tasks={initialState.completed} /> */}
         </TasksWrapper>
