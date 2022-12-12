@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, {useState} from "react";
 import TaskColumn from "../../Components/CardColumn";
 import AddStatus from "../../Components/AddStatus/index";
 import {
@@ -17,7 +17,7 @@ import { TASK_TYPE } from "../../Constants/type";
 
 const WorkSpace = () => {
   const [tasks, setTasks] = useState(initialState);
-  
+
   // for droping task to  task array
   const onDrop = (task, monitor, status) => {
     const mapping = statuses.find((si) => si.status === status);
