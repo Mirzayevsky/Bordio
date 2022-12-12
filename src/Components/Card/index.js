@@ -3,25 +3,25 @@ import { useDrag } from 'react-dnd';
 import { Cover, Date, TaskCard, Title } from './styles'
 
 const  Card = ({item,type,ondropTask,index }) => {
+
     const [{ isDraggble }, dragRef] = useDrag({
-        type: type,
-        item: () => ({ ...item, index }),
-        end: (item, monitor) => {
-          const dropResult = monitor.getDropResult();
-          if (dropResult && item) {
-            ondropTask(item);
-          }
-        },
-        collect: (monitor) =>(
-          {
-            isDragging:monitor.isDragging()
-          }
-        )
-      });
+          type:type,
+          item:() => ({ ...item, index }),
+          end: (item, monitor) => {
+            const dropResult = monitor.getDropResult();
+            if (dropResult && item) {
+              ondropTask(item);
+            }
+          },
+          collect: (monitor) => (
+            {
+              isDragging:monitor.isDragging() ? 0.5 : 1,
+            }
+          )
+        });
 
   return (
-    <>
-      <TaskCard style={{ backgroundColor: `${item.bg}` }} ref={dragRef} >
+      <TaskCard style={{ backgroundColor: `${item.bg}`, isDraggble }} ref={dragRef} >
           {item.bg === "#F0F0F0" ? <Cover /> : ""}
           <Title
             style={{
@@ -32,7 +32,6 @@ const  Card = ({item,type,ondropTask,index }) => {
           </Title>
           <Date>{item.date}</Date>
         </TaskCard>
-    </>
   )
 }
 

@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import TaskColumn from "../../Components/CardColumn";
 import AddStatus from "../../Components/AddStatus/index";
-
 import {
   WorkSpaceWrapper,
   Title,
@@ -12,34 +11,64 @@ import {
   Wrapper,
   TaskContent,
 } from "./styles";
-import { initialState } from "../../data";
+import { initialState, statuses } from "../../data";
 import { useDrop } from "react-dnd";
+import { TASK_TYPE } from "../../Constants/type";
 
 const WorkSpace = () => {
-  const [newTask, setNewTask] = useState(initialState.newTasks);
-  const [scheduled, setScheduled] = useState(initialState.scheduled);
+  const [tasks, setTasks] = useState(initialState);
+  
+  // for droping task to  task array
+  const onDrop = (task, monitor, status) => {
+    const mapping = statuses.find((si) => si.status === status);
+    setTasks((prevState) => {
+      const newItems = prevState
+        .filter((i) => i.id !== task.id)
+        .concat({ ...task, status });
+      return [...newItems];
+    });
+  };
 
-  const [{ isOver }, addToScheduledRef] = useDrop({
-    accept: "newTask",
+  // const [{ isOver }, drop] = useDrop({
+  //   accept: TASK_TYPE,
+  //   canDrop: (task, monitor) => {
+  //       const taskIndex = statuses.findIndex(si => si.status === task.status);
+  //       const statusIndex = statuses.findIndex(si => si.status === status);
+  //       return [taskIndex + 1, taskIndex - 1, taskIndex].includes(statusIndex);
+  //   },
+
+  //   drop: (task, monitor) => {
+  //       onDrop(task, monitor, status);
+  //   },
+
+  //   collect: monitor => ({
+  //       isOver: monitor.isOver()
+  //   })
+  // });
+
+  const [{ isOver }, scheduledRef] = useDrop({
+    accept: TASK_TYPE,
     collect: (monitor) => ({ isOver: !!monitor.isOver() }),
   });
 
-  const [{ isOver: isNewTaskOver }, removeFromScheduledRef] = useDrop({
-    accept: "scheduled",
-    collect: (monitor) => ({ isOver: !!monitor.isOver() }),
-  });
-
-  const moveNewTaskToScheduled = (item) => {
-    console.log(item);
-    setNewTask((prev) => prev.filter((_, i) => i !== item.index));
-    setScheduled((prev) => [...prev, item]);
+  const movetasks = (dragIndex, hoverIndex) => {
+    const task = tasks[dragIndex];
+    setTasks((prevState) => {
+      const newTasks = prevState.filter((i, idx) => idx !== dragIndex);
+      newTasks.splice(hoverIndex, 0, task);
+      return [...newTasks];
+    });
   };
 
-  const removeNewTaskFromScheduled = (item) => {
+  const taskMove = (item) => {
     console.log(item);
-    setScheduled((prev) => prev.filter((_, i) => i !== item.index));
-    setNewTask((prev) => [...prev, item]);
+    if (item) {
+      setTasks((prev) => prev.filter((_, i) => i !== item.index));
+    }else{
+      setTasks((prev) => [...prev, item]);
+    }
   };
+
   return (
     <WorkSpaceWrapper>
       <TaskContent>
@@ -47,43 +76,39 @@ const WorkSpace = () => {
           <TitleWrapper>
             <Wrapper>
               <Title>New tasks</Title>
-              <TaskCount>{initialState.newTasks.length}</TaskCount>
+              <TaskCount>{initialState.tasks.length}</TaskCount>
             </Wrapper>
           </TitleWrapper>
           <TitleWrapper>
             <Wrapper>
               <Title>Scheduled</Title>
-              <TaskCount>{initialState.scheduled.length}</TaskCount>
+              <TaskCount></TaskCount>
             </Wrapper>
           </TitleWrapper>
           <TitleWrapper>
             <Wrapper>
               <Title>In progress</Title>
-              <TaskCount>{initialState.inprogress.length}</TaskCount>
+              <TaskCount></TaskCount>
             </Wrapper>
           </TitleWrapper>
           <TitleWrapper>
             <Wrapper>
               <Title>Completed</Title>
-              <TaskCount>{initialState.completed.length}</TaskCount>
+              <TaskCount></TaskCount>
             </Wrapper>
           </TitleWrapper>
         </Header>
         <TasksWrapper>
-          <TaskColumn
-            tasks={newTask}
-            type="newTask"
-            ondropTask={moveNewTaskToScheduled}
-            add={removeFromScheduledRef}
-          />
-          <TaskColumn
-            tasks={scheduled}
-            type="scheduled"
-            ondropTask={removeNewTaskFromScheduled}
-            add={addToScheduledRef}
-          />
-          {/* <CardColumn tasks={initialState.inprogress} /> */}
-          {/* <CardColumn tasks={initialState.completed} /> */}
+          {statuses.status.map((item) => (
+            <TaskColumn
+              key={item.id}
+              status={item.name}
+              tasks={tasks.tasks}
+              type={item.name}
+              ondropTask={taskMove}
+              add={scheduledRef}
+            />
+          ))}
         </TasksWrapper>
       </TaskContent>
       <AddStatus />
