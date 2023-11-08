@@ -20,7 +20,7 @@ const WorkSpace = () => {
 
   // for droping task to  task array
   const onDrop = (task, monitor, status) => {
-    const mapping = statuses.find((si) => si.status === status);
+    const mapping = status.find((si) => si.status === status);
     setTasks((prevState) => {
       const newItems = prevState
         .filter((i) => i.id !== task.id)
