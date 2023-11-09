@@ -1,5 +1,5 @@
 import styled from "styled-components";
-export const TaskCard = styled.div`
+export const Wrapper = styled.div`
   min-width: 266px !important;
   max-width: 266px !important;
   height: fit-content;
@@ -9,6 +9,7 @@ export const TaskCard = styled.div`
   margin: 10px 0;
   position: relative;
   cursor: pointer;
+  background-color: lightblue;
 `;
 export const Cover = styled.div`
 height: 100%;

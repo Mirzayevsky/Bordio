@@ -1,5 +1,5 @@
 import styled from "styled-components";
-export const CardWrapper = styled.div`
+export const Column = styled.div`
   margin: 0 22px;
   min-width: 266px !important;
   max-width: 266px !important;

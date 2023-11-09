@@ -107,7 +107,7 @@ export const initialState = {
     },
   ],
 };
-export const statuses = {
+export const dataStatus = {
   status:[
     { id: 1, name: "newTask" },
     { id: 2, name: "scheduled" },
