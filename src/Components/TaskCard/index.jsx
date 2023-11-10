@@ -1,10 +1,10 @@
 import React, { memo} from "react";
 import { Wrapper, Cover, Title, Date } from "./styles";
-
-
+import {COLUMN_STATUS} from "../../Constants/type"
 const TaskCard = memo((props) => {
   const { data, draggable = false, onDrop, onDragOver, onDragStart } = props;
   const { date, status, title,bg } = data;
+  const {completed} = COLUMN_STATUS
 
   const handleDrop = (event) => {
     if (onDrop) {
@@ -18,16 +18,16 @@ const TaskCard = memo((props) => {
     }
   };
 
-  const isCompleted = status === "completed";
+  const isCompleted = status === completed
 
   return (
     <Wrapper
       draggable={draggable}
-      // isCompleted={isCompleted}
+      isCompleted={isCompleted}
       onDrop={handleDrop}
       onDragOver={onDragOver}
       onDragStart={handleDragStart}
-      style={{ backgroundColor: `${bg}` }}
+      cardColor={bg}
     >
       {bg === "#F0F0F0" ? <Cover /> : ""}
       <Title

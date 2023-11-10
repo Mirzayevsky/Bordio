@@ -8,8 +8,7 @@ export const Wrapper = styled.div`
   padding: 15px 11px;
   margin: 10px 0;
   position: relative;
- 
-
+background-color: lightblue;
   &:hover {
     cursor: grab;
   }

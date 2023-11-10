@@ -91,7 +91,7 @@ const Board = () => {
           return (
             <TaskColumn
                 key={item.id}
-                type={item.label}
+                type={item.id}
                 data={item}
                 onDrop={handleDrop}
                 onDragStart={handleDragStart}

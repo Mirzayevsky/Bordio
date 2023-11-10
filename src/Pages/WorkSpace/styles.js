@@ -4,6 +4,5 @@ export const WorkSpaceWrapper = styled.div`
   height: calc(100vh - 80px);
   position: fixed;
   right: 0;
-  bottom: 0;
   top: 80px;
 `;

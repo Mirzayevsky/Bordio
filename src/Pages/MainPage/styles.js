@@ -8,13 +8,13 @@ export const MainPageWrapper = createGlobalStyle`
     box-sizing: border-box;
     /* font-family: 'Roboto', sans-serif; */
 }
-/* html{
+html{
     overflow: scroll;
     overflow-x: hidden;
   }
   ::-webkit-scrollbar{
     width: 0;
-  } */
+  }
 .ant-picker-dropdown{
   width: 426px !important;
   height: 278px;

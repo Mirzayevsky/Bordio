@@ -28,6 +28,7 @@ const TaskColumn = (props) => {
             <TaskCard
               key={item.id}
               data={item}
+              type={type === "completed" ? "red":""}
               draggable
               onDrop={handleDrop}
               onDragStart={handleDragStart}

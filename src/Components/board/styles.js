@@ -2,17 +2,19 @@ import styled from "styled-components";
 
 export const TaskContent = styled.div`
   height: calc(100vh - 80px);
-  width: 62.5%;
-  /* top: 80px;
-  left: 373px;
-  position: fixed; */
+  width: 80%;
+  top: 0;
+  left: 0;
+  position: absolute; 
   border-right: 1px solid #f3f3f3;
   background-color: #fff;
-  overflow-x: auto;
+  overflow: auto;
   &:nth-last-child(){
     border-right: 0;
   }
 `;
+
+
 export const Header = styled.div`
   height: 61.4px;
   width: fit-content;

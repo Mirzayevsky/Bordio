@@ -94,31 +94,31 @@ export const data = [
         id: 11,
         title: "Check email",
         date: "2:30h",
-        bg: "#F0F0F0",
+        bg: "#FEC6B7",
       },
       {
         id: 12,
         title: "Weekly planning session",
         date: "3:00h",
-        bg: "#F0F0F0",
+        bg: "#D9E6A2",
       },
       {
         id: 13,
         title: "Create 5+ target audiences in Facebook for Samsung ...",
         date: "0 : 20h",
-        bg: "#F0F0F0",
+        bg: "#FFDFBA",
       },
       {
         id: 14,
         title: "Check FB Banner Design and give feedback",
         date: "0 : 20h",
-        bg: "#F0F0F0",
+        bg: "#ABE9CE",
       },
       {
         id: 15,
         title: "Check email",
         date: "0 : 20h",
-        bg: "#F0F0F0",
+        bg: "#FEC6B7",
       },
     ]
   }

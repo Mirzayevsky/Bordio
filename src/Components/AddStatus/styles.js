@@ -1,12 +1,12 @@
 import styled from "styled-components";
 export const StatusWrapper = styled.div`
-  width: calc(100% - 73%);
+  width: 20%;
   height: calc(100vh - 80px);
   position: fixed;
   right: 0;
   bottom: 0;
   background-color: #fff;
-  z-index: 1211;
+  z-index: 999999999;
 `;
 export const Header = styled.div`
   height: 61.4px;
@@ -17,20 +17,20 @@ export const Header = styled.div`
   position: relative;
 
   svg {
-  height: 14px;
-  width: 13px;
-  margin-top: 4%;
-  margin-left: 30px;
-  position: absolute;
+    height: 14px;
+    width: 13px;
+    margin-top: 4%;
+    margin-left: 30px;
+    position: absolute;
     path {
-      fill: #8C939F;
+      fill: #8c939f;
     }
   }
-  &::before{
-    content: '';
+  &::before {
+    content: "";
     position: absolute;
     right: 0;
-    top:61.4px;
+    top: 61.4px;
     height: 1px;
     width: calc(100vw - 373px);
     background-color: #f3f3f3;
@@ -40,7 +40,7 @@ export const Header = styled.div`
 export const Input = styled.input`
   height: 100%;
   width: 90%;
-  margin-left:auto;
+  margin-left: auto;
   border: 0;
   outline: none;
   font-family: "Roboto";
@@ -51,8 +51,8 @@ export const Input = styled.input`
   text-align: left;
   display: flex;
   margin-left: 20px;
-  color: #8C939F;
+  color: #8c939f;
   cursor: pointer;
-  padding: 0 29px ;
+  padding: 0 29px;
   padding-top: 15px;
 `;
