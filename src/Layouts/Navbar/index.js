@@ -16,31 +16,31 @@ import { ReactComponent as SearchSvg } from "../../assets/kontur.svg";
 import { ReactComponent as XSvg } from "../../assets/x.svg";
 import { ReactComponent as BellSvg } from "../../assets/bxs-bell.svg";
 import { ReactComponent as UserSvg } from "../../assets/Ellipse 1.svg";
-import { initialState } from "../../data";
+import { data } from "../../data";
 import DatePicker from "../../Components/DatePicker";
 
 const Navbar = () => {
-  const [filteredData, setFilteredData] = useState(initialState);
-  const [wordEntered, setWordEntered] = useState("");
-  const [open, setOpen] = useState(false);
+  // const [filteredData, setFilteredData] = useState(data);
+  // const [wordEntered, setWordEntered] = useState("");
+  // const [open, setOpen] = useState(false);
 
-  const handleFilter = (event) => {
-    const searchWord = event.target.value;
-    setWordEntered(searchWord);
-    const newFilter = []?.filter((value) => {
-      return value.title.toLowerCase().includes(searchWord.toLowerCase());
-    });
+  // const handleFilter = (event) => {
+  //   const searchWord = event.target.value;
+  //   setWordEntered(searchWord);
+  //   const newFilter = []?.filter((value) => {
+  //     return value.title.toLowerCase().includes(searchWord.toLowerCase());
+  //   });
 
-    if (searchWord === "") {
-      setFilteredData([]);
-    } else {
-      setFilteredData(newFilter);
-    }
-  };
-  const clearInput = () => {
-    setFilteredData([]);
-    setWordEntered("");
-  };
+  //   if (searchWord === "") {
+  //     setFilteredData([]);
+  //   } else {
+  //     setFilteredData(newFilter);
+  //   }
+  // };
+  // const clearInput = () => {
+  //   setFilteredData([]);
+  //   setWordEntered("");
+  // };
 
   return (
     <NavbarWrapper>
@@ -62,12 +62,12 @@ const Navbar = () => {
           isDropDown={"true"}
         />
       </ButtonWrapper>
-      <DatePicker Svg={DownSvg} open={open} setOpen={setOpen} />
+      {/* <DatePicker Svg={DownSvg} open={open} setOpen={setOpen} /> */}
       <ContentsWrapper>
         <InputWrapper>
           <Input
-            action={handleFilter}
-            value={wordEntered}
+            // action={handleFilter}
+            // value={wordEntered}
             name="seach"
             placeholder={"Seach..."}
             color="#8C939F"
@@ -76,11 +76,11 @@ const Navbar = () => {
             bg="#F5F8FA"
             // type="search"
           />
-          {wordEntered.length === 0 ? (
+          {/* {wordEntered.length === 0 ? (
             <SearchSvg />
           ) : (
             <XSvg onClick={clearInput} />
-          )}
+          )} */}
         </InputWrapper>
         <Notification>
           <MessageCount>

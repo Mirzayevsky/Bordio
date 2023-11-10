@@ -1,19 +1,21 @@
-import React from 'react'
-import Navbar from '../../Layouts/Navbar'
-import Sidebar from '../../Layouts/Sidebar'
-import Tools from '../../Layouts/Tools'
-import WorkSpace from '../WorkSpace'
-import { MainPageWrapper } from './styles'
+import React from "react";
+import { ThemeProvider } from "styled-components";
+import Navbar from "../../Layouts/Navbar";
+import Sidebar from "../../Layouts/Sidebar";
+import Tools from "../../Layouts/Tools";
+import WorkSpace from "../WorkSpace";
+import { MainPageWrapper } from "./styles";
 
 const MainPage = () => {
   return (
-    <MainPageWrapper>
-        <Sidebar/>
-        <Tools/>
-        <Navbar/>
-        <WorkSpace/>
-    </MainPageWrapper>
-  )
-}
+    <React.Fragment>
+      <Sidebar />
+      <Tools />
+      <Navbar />
+      <WorkSpace />
+      <MainPageWrapper />
+    </React.Fragment>
+  );
+};
 
-export default MainPage
+export default MainPage;

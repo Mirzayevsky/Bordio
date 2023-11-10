@@ -1,6 +1,6 @@
-import React, { memo, DragEventHandler } from "react";
+import React, { memo} from "react";
 import { Wrapper, Cover, Title, Date } from "./styles";
-import { dataStatus } from "../../data";
+
 
 const TaskCard = memo((props) => {
   const { data, draggable = false, onDrop, onDragOver, onDragStart } = props;
@@ -23,7 +23,7 @@ const TaskCard = memo((props) => {
   return (
     <Wrapper
       draggable={draggable}
-      isCompleted={isCompleted}
+      // isCompleted={isCompleted}
       onDrop={handleDrop}
       onDragOver={onDragOver}
       onDragStart={handleDragStart}
@@ -32,12 +32,12 @@ const TaskCard = memo((props) => {
       {bg === "#F0F0F0" ? <Cover /> : ""}
       <Title
         style={{
-          textDecoration: `${bg === "#F0F0F0" ? "line-through" : ""}`,
+          textDecoration: `${status === "completed" ? "line-through" : ""}`,
         }}
       >
         {title}
       </Title>
-      <Date>{status}</Date>
+      <Date>{date}</Date>
     </Wrapper>
   );
 });

@@ -8,8 +8,11 @@ export const Wrapper = styled.div`
   padding: 15px 11px;
   margin: 10px 0;
   position: relative;
-  cursor: pointer;
-  background-color: lightblue;
+ 
+
+  &:hover {
+    cursor: grab;
+  }
 `;
 export const Cover = styled.div`
 height: 100%;

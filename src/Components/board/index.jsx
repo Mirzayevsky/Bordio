@@ -14,17 +14,21 @@ import {
   moveCardInColumn,
 } from "../../helpers/board/index";
 
-import { initialState, dataStatus } from "../../data";
+import { data } from "../../data";
 import TaskColumn from "../TaskColumn";
 
 const Board = () => {
 
-  const [boardData, setBoardData] = useState(initialState.tasks);
+  const [boardData, setBoardData] = useState(data);
   const [currentCard, setCurrentCard] = useState(null);
   const [currentColumn, setCurrentColumn] = useState(null);
-  const handleDrop = useCallback(
-    (event, column, card) => {
+
+  const handleDrop = useCallback( (event, column, card) => {
       event.stopPropagation();
+      console.log("handleDrop data")
+      console.log(column)
+      console.log(card)
+      console.log(event)
 
       if (!(currentCard && currentColumn)) return;
 
@@ -68,13 +72,12 @@ const Board = () => {
     <TaskContent>
       {/* <----------- Header ---------------->*/}
       <Header>
-        {dataStatus.status.map((i) => {
-          const sortdata = boardData.filter((item) => item.status === i.name);
+        {boardData.map(({id,label,items}) => {
           return (
-            <TitleWrapper key={i.id}>
+            <TitleWrapper key={id}>
               <Wrapper>
-                <Title>{i.name}</Title>
-                <TaskCount>{sortdata.length}</TaskCount>
+                <Title>{label}</Title>
+                <TaskCount>{items.length}</TaskCount>
               </Wrapper>
             </TitleWrapper>
           );
@@ -83,12 +86,13 @@ const Board = () => {
 
       {/* <----------- Columns of Task ---------------->*/}
       <TasksWrapper>
-        {dataStatus.status.map((item) => {
+        {/* start cheaking from here...... */}
+        {boardData.map((item) => {
           return (
             <TaskColumn
                 key={item.id}
-                type={item.name}
-                data={boardData}
+                type={item.label}
+                data={item}
                 onDrop={handleDrop}
                 onDragStart={handleDragStart}
                 onDragOver={handleDragOver} />
