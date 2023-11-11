@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   padding: 15px 11px;
   margin: 10px 0;
   position: relative;
-background-color: lightblue;
+  /* background-color: ${({ state }) => (state === "completed" ? "lightblue" : '')}; */
   &:hover {
     cursor: grab;
   }

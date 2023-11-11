@@ -7,6 +7,7 @@ export const StatusWrapper = styled.div`
   bottom: 0;
   background-color: #fff;
   z-index: 999999999;
+  background-color: green;
 `;
 export const Header = styled.div`
   height: 61.4px;

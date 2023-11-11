@@ -12,25 +12,35 @@ export const data = [
         id: 1,
         title: "Check email",
         date: "0:20h",
-        bg: "#ABE9CE",
+        style: "#ABE9CE",
+        status:"newTask",
+        priority:"high"
       },
       {
         id: 2,
         title: "Compare PPC agencies and make a report for Steven",
         date: "3:00h",
-        bg: "#D8DCFF",
+        style: "#D8DCFF",
+        status:"newTask",
+        priority:"high"
+
       },
       {
         id: 3,
         title: "Meeting with Amanda (PR department)",
         date: "0 : 20h",
-        bg: "#ABE9CE",
+        style: "#ABE9CE",
+        status:"newTask",
+        priority:"low"
+
       },
       {
         id: 4,
         title: "Get Patrick's approval for homepage new design",
         date: "0:20h",
-        bg: "#D8DCFF",
+        style: "#D8DCFF",
+        status:"newTask",
+        priority:"medium"
       },
     ]
   },
@@ -43,19 +53,25 @@ export const data = [
         id: 5,
         title: "Check email",
         date: "0:20h",
-        bg: "#FFDFBA",
+        style: "#FFDFBA",
+        status:"scheduled",
+        priority:"medium"
       },
       {
         id: 6,
         title: 'Write a blogpost "7 best strategies for SEO in 2020"',
         date: "3:00h",
-        bg: "#FEC6B7",
+        style: "#FEC6B7",
+        status:"scheduled",
+        priority:"high"
       },
       {
         id: 7,
         title: "New Ad copies for Manamaja",
         date: "0 : 20h",
-        bg: "#D9E6A2",
+        style: "#D9E6A2",
+        status:"scheduled",
+        priority:"low"
       },
     ]
   },
@@ -68,19 +84,25 @@ export const data = [
         id: 8,
         title: "Check email",
         date: "0:20h",
-        bg: "#FFDFBA",
+        style: "#FFDFBA",
+        status:"inProgress",
+        priority:"medium"
       },
       {
         id: 9,
         title: "Record a video comment about last week's analytics report",
         date: "3:00h",
-        bg: "#F2BAE1",
+        style: "#F2BAE1",
+        status:"inProgress",
+        priority:"medium"
       },
       {
         id: 10,
         title: "Process all resumes for Content Marketer position",
         date: "0:45h",
-        bg: "#FFDFBA",
+        style: "#FFDFBA",
+        status:"inProgress",
+        priority:"low"
       },
       
     ]
@@ -94,31 +116,41 @@ export const data = [
         id: 11,
         title: "Check email",
         date: "2:30h",
-        bg: "#FEC6B7",
+        style: "#FEC6B7",
+        status:"completed",
+        priority:"high"
       },
       {
         id: 12,
         title: "Weekly planning session",
         date: "3:00h",
-        bg: "#D9E6A2",
+        style: "#D9E6A2",
+        status:"completed",
+        priority:"medium"
       },
       {
         id: 13,
         title: "Create 5+ target audiences in Facebook for Samsung ...",
         date: "0 : 20h",
-        bg: "#FFDFBA",
+        style: "#FFDFBA",
+        status:"completed",
+        priority:"low"
       },
       {
         id: 14,
         title: "Check FB Banner Design and give feedback",
         date: "0 : 20h",
-        bg: "#ABE9CE",
+        style: "#ABE9CE",
+        status:"completed",
+        priority:"medium"
       },
       {
         id: 15,
         title: "Check email",
         date: "0 : 20h",
-        bg: "#FEC6B7",
+        style: "#FEC6B7",
+        status:"completed",
+        priority:"medium"
       },
     ]
   }

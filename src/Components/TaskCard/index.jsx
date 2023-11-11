@@ -1,10 +1,19 @@
-import React, { memo} from "react";
+import React, { memo, useState} from "react";
 import { Wrapper, Cover, Title, Date } from "./styles";
 import {COLUMN_STATUS} from "../../Constants/type"
 const TaskCard = memo((props) => {
-  const { data, draggable = false, onDrop, onDragOver, onDragStart } = props;
-  const { date, status, title,bg } = data;
+  // const [state,setState] = useState(props)
+  const { data, draggable = false, onDrop, onDragOver, onDragStart,} = props;
+  const { date, status, title,style } = data;
   const {completed} = COLUMN_STATUS
+
+  // setState(state)
+
+  // const isCompleted = status === completed
+
+  console.log("status:",status)
+  // console.log("cards:",data)
+
 
   const handleDrop = (event) => {
     if (onDrop) {
@@ -18,21 +27,21 @@ const TaskCard = memo((props) => {
     }
   };
 
-  const isCompleted = status === completed
-
+ 
   return (
     <Wrapper
       draggable={draggable}
-      isCompleted={isCompleted}
       onDrop={handleDrop}
       onDragOver={onDragOver}
       onDragStart={handleDragStart}
-      cardColor={bg}
+      style={{
+        backgroundColor: `${status === completed ? "lightblue" : style}`
+      }}
     >
-      {bg === "#F0F0F0" ? <Cover /> : ""}
+      {style === "#F0F0F0" ? <Cover /> : ""}
       <Title
         style={{
-          textDecoration: `${status === "completed" ? "line-through" : ""}`,
+          textDecoration: `${status === completed ? "line-through" : ""}`,
         }}
       >
         {title}

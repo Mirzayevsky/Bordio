@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import { Column } from "./styles";
 import TaskCard from "../TaskCard";
 const TaskColumn = (props) => {
-  const { data, onDrop, onDragStart, onDragOver, type } = props;
+  const { data, onDrop, onDragStart, onDragOver } = props;
 
   const handleDrop = useCallback(
     (event, card) => onDrop(event, data, card),
@@ -28,7 +28,6 @@ const TaskColumn = (props) => {
             <TaskCard
               key={item.id}
               data={item}
-              type={type === "completed" ? "red":""}
               draggable
               onDrop={handleDrop}
               onDragStart={handleDragStart}
