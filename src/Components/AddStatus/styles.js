@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const StatusWrapper = styled.div`
-  width: 20%;
+  width: 300px;
   height: calc(100vh - 80px);
   position: fixed;
   right: 0;
