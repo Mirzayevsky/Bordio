@@ -22,6 +22,7 @@ export const addCardToColumn = (column, toIndex, card) => {
     items: newItems,
   };
 };
+const newItem = []
 
 // move card in column
 export const moveCardInColumn = (column, fromIndex, toIndex) => {
